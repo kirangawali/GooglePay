@@ -1,0 +1,89 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+.h1{
+  
+  }
+
+  .heading{
+    color:blue;
+    text-shadow: blue;
+    background-color:#81F781;
+    text-align: center;
+  }
+  .heading1{
+   
+    text-align: center;
+  }
+  .button{
+    color:blue;
+    width: 100%;
+    padding: 12px 30px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 3px 2px;
+    cursor: pointer;
+  
+  }
+  .btn{
+    background: blue;
+    color:white;
+    font-size: 20px;
+    padding: 8px 20px;
+    margin: 4px 2px;
+    display: inline-block;
+    cursor: pointer;
+  
+  }
+  .wrapper
+  {
+    text-align: right;
+  }
+  
+  .img
+   {
+    min-height: 15%;
+    width: 15%;
+  
+  }
+  .align
+  {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+   .item3 { grid-area: main;  text-align: center;}
+   .item4 { grid-area: right; }
+   .grid-container {
+     display: grid;
+     grid-template-areas:
+       'header header header header header header'
+       'menu main main main right right'
+       'menu footer footer footer footer footer';
+     grid-gap: 3px;
+     padding: 1px;
+   }
+  
+   .grid-container > div {
+  
+     text-align: center;
+     padding: -5px 0;
+     font-size: 30px;
+   }
+   .date{
+    font-size: 15px;
+   }
+  
+  
+  .btn-dropdown
+  {
+    background : none;
+    width:100%;
+    vertical-align :middle;
+
+  }
+  .input-group .caret
+  {
+    margin: 7px 0px;
+  }

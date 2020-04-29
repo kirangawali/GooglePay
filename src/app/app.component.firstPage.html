@@ -1,0 +1,298 @@
+<div class="" style="width:100;height:20%;">
+<div style="float: left; width:50%; background-color: #3B5998;color:white;">
+  <h1 style="margin-left: 20%;font-weight:bold;">facebook</h1>
+ 
+
+</div>
+
+<div style="float: right; width:50%; height: 20%;background-color: #3B5998;">
+    
+<div style="margin-top: 10px;"></div>
+  <div>
+    <table style="width:100%" >
+      <thead>
+      
+        <tr style="">
+          <td class="col-md-1">
+
+          </td>
+          <td class="col-md-3" style="color: white;">
+              Email or Phone
+          </td>
+          <td class="col-md-1">
+
+          </td>
+
+          <td class="col-md-3" style="color: white;">
+            Password
+            </td>
+
+            <td class="col-md-4">
+                
+                </td>
+
+        </tr>
+        
+<div style="margin-top: 3.8px;"></div>
+        <tr style="">
+            <td class="col-md-1">
+  
+            </td>
+            <td class="col-md-3" style="color: white;">
+                <input type="text" class="full-width;">
+            </td>
+            <td class="col-md-1">
+  
+            </td>
+  
+            <td class="col-md-3" style="color: white;">
+                <input type="text" class="full-width;">
+              </td>
+  
+              <td class="col-md-1">
+                  <button class="btn btn-primary btn-xs">Log In</button>
+                  </td>
+  
+                  <td class="col-md-3">
+                 
+                    </td>
+          </tr>
+          
+
+      </thead>
+
+
+    </table>
+    <div style="margin-top: 10px;"></div>
+  </div>
+
+</div>
+
+  
+</div>
+
+
+
+<div style="">
+
+  <div style="float: left; width: 55%; height:700px; background-color: #E2E5F0">
+    <div>
+
+    <h4 style="margin-left :300px;margin-top :40px;margin-right :100px;font-weight: bold;">
+        Facebook helps you connect and share with the people in your life.
+    </h4>
+  </div>
+  <BR/><BR/>
+  <div style="margin-left :300px;margin-right :10px; "> 
+      <img width="500" height="200" class="" alt="" src="/assets/images/fbImg.PNG">
+  </div>
+
+  </div>
+
+  <div style="float: right; width: 45%; height:700px;background-color:#E2E5F0  ">
+
+      <div>
+        <h2 style="font-weight: bold;margin-top :20px;margin-left :0px;">
+          Create an Account
+        </h2>
+      </div>
+      <div>
+          <h3 style="font-weight: normal;margin-top :20px;margin-left :0px;">
+           It's quick and easy
+          </h3>
+        </div>
+        
+<div class=" " style=""> 
+ 
+    <form #userForm = "ngForm">
+     <!--    {{ userForm.value | json}} -->
+  <hr/>
+  
+   <!-- {{userModel | json}} -->
+  
+      <div class="form-group">
+        <table>
+          <tr>
+          
+            <td class="col-md-6 input-group">
+               <div  class="input-group"> 
+                <input type="text" required  placeholder="First name"  pattern="[a-zA-Z ]*"  #firstName="ngModel"  name="userFirstName"
+                [class.is-invalid]="firstName.invalid && firstName.touched" class="form-control "
+                 
+                [(ngModel)]="userModel.userFirstName">
+               </div>
+               
+               <!-- <small [class.d-none]="firstName.valid || firstName.untouched">Firstname is required</small> -->
+              </td>
+
+
+            
+                             <td class="col-md-6">
+                    <input type="text" required  placeholder="Surname" #surName="ngModel" pattern="[0-9]*$" name="userSurName"
+                    [class.is-invalid]="surName.invalid && surName.touched" class="form-control"
+                    
+                    [(ngModel)]="userModel.userSurName">
+                     <small [class.d-none]="surName.valid || surName.untouched">SurName is required & only Numeric</small>  
+                  </td>
+                 
+          </tr>
+
+        </table>
+        
+     untouched   {{ firstName.untouched}}
+      </div>
+
+      <!-- Dropdown example -->
+
+      <div class="form-group">
+        <table style="width:60%">
+            <tr>
+              <td class="col-md-12">
+                A  {{topicHasError }} {{topic.touched }} B
+                  <select  #topic="ngModel"
+                  (blur)="validateTopic(topic.value)"
+                  (change)="validateTopic(topic.value)"
+                  name="topic" [(ngModel)]="userModel.topic" [class.is-invalid]="topicHasError && topic.touched" class="custom-select">
+                    <option value="">Select</option>
+                    <option *ngFor="let t of topicArr">{{t}}</option>
+
+                  </select>
+
+                   
+                <small [class.d-none]="!topicHasError || topic.untouched">Please Select topic</small>
+                </td>
+                 
+                   
+            </tr>
+  
+          </table>
+          
+        </div>
+  <br/>
+  
+
+      <!-- -->
+
+     
+<div>
+      <table style="width:60%">
+          <tr>
+            <td class="col-md-12">
+                <input type="text"  required  placeholder="Mobile or Email Address" #userEmail="ngModel"  name="userEmailAddress"
+                [class.is-invalid]="userEmail.invalid && userEmail.touched" class="form-control"
+                
+                [(ngModel)]="userModel.userEmailAddress">
+             <!--   <small [class.d-none]="name.valid || name.untouched">Name is required</small>--> 
+              </td>
+               
+                 
+          </tr>
+
+        </table>
+        
+      </div>
+<br/>
+      <div>
+          <table style="width:60%">
+              <tr>
+                <td class="col-md-12">
+                    <input type="password"  required  placeholder="New Password" #userPassword="ngModel"  name="userNewPassword"
+                    [class.is-invalid]="userPassword.invalid && userPassword.touched" class="form-control"
+                    
+                    [(ngModel)]="userModel.userNewPassword">
+                 <!--   <small [class.d-none]="name.valid || name.untouched">Name is required</small>--> 
+                  </td>
+                   
+                     
+              </tr>
+    
+            </table>
+            
+          </div>
+          <br/>
+         
+                  <div>
+                      <table style="width:60%">
+                        
+                          <tr>
+                            <td class="col-md-12">
+                                <label>Gender</label>
+                                
+                             <!--   <small [class.d-none]="name.valid || name.untouched">Name is required</small>--> 
+                              </td>
+                               
+                                 
+                          </tr>
+                
+                        </table>
+                        
+                      </div>
+        
+        
+                     
+
+                    
+                      <div>
+                          <table style="width:60%">
+                            
+                              <tr>
+                                  <td class="col-md-1">
+                           
+                           
+                            
+                          
+                                    </td>
+                                <td class="col-md-2">
+                                    <input type="radio" class="form-check-input" [(ngModel)]="userModel.timepreference"
+        name ="timePreference" value ="Morning">
+        <label class="form-check-label">  &nbsp;&nbsp;&nbsp;&nbsp; Male</label>
+                                    
+                                 <!--   <small [class.d-none]="name.valid || name.untouched">Name is required</small>--> 
+                                  </td>
+                                  <td class="col-md-2">
+                                      <input type="radio" class="form-check-input" [(ngModel)]="userModel.timepreference"
+          name ="timePreference" value ="Morning">
+          <label class="form-check-label"> &nbsp;&nbsp;&nbsp;&nbsp;  Female</label>
+                                      
+                                   <!--   <small [class.d-none]="name.valid || name.untouched">Name is required</small>--> 
+                                    </td>
+                                    <td class="col-md-2">
+                                        <input type="radio" class="form-check-input" [(ngModel)]="userModel.timepreference"
+            name ="timePreference" value ="Morning">
+            <label class="form-check-label"> &nbsp;&nbsp;&nbsp;&nbsp; Other</label>
+                                        
+                                     <!--   <small [class.d-none]="name.valid || name.untouched">Name is required</small>--> 
+                                      </td>
+                                      <td class="col-md-5">
+                           
+                           
+                            
+                          
+                                        </td>
+                                     
+                              </tr>
+                    
+                            </table>
+                            
+                          </div>
+            
+            
+                          <br/>
+      <!--  {{name.untouched}}    {{name.invalid}}     {{name.touched}} -->
+    
+    
+        
+      
+      <button class="btn btn-primary btn-lg" [disabled] = " userForm.form.invalid" type="submit">
+      Sign Up</button>
+
+      {{ userForm.form.valid }}
+    </form>
+    
+    </div>
+
+    </div>
+
+
+</div>
+

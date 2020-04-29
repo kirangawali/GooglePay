@@ -1,0 +1,94 @@
+
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+ /* background-color: #F2F2F2; */
+  
+}
+
+.fontCss
+{
+font-size : 20px;
+font-weight: bold;
+color: blue;
+
+
+}
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: black;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: #ACFA58;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #A4A4A4;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 5px 5px 5px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  margin: 5px 5px 5px 5px;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+  margin: 5px 5px 5px 5px;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+  margin: 5px 5px 5px 5px;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+  margin: 5px 5px 5px 5px;
+}
+
+.fa-skype {
+  background: #00aff0;
+  color: white;
+  margin: 5px 5px 5px 5px;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+  margin: 5px 5px 5px 5px;
+}

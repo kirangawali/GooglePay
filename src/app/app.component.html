@@ -1,0 +1,43 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+ 
+<div style="text-align:center;" class="  alert-info">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+ <!--  <h6>
+{{dateMessage}}
+
+  </h6>-->
+  
+</div>
+  
+<div class="container-fluid" style="border:1px solid #cecece;">
+<div style = "">
+  User Details : 
+</div>
+
+<div style = "">
+  
+    <p> First Name  : {{ user.firstName}} </p>
+    <p> Last Name  : {{ user.lastName}} </p>
+    <p> Email : {{ user.email}} </p>
+    <diV *ngIf="user.phone.length">
+    <p> phone : </p>
+    <p *ngFor="let phoneNumber of user.phone">   {{phoneNumber}}  </p>
+
+  </diV>
+  <div>
+    city: 
+    <p *ngFor = "let c of city">{{c}}</p>
+  </div>
+ </div>
+</div>
+ 
+  
+
+<button (click)="onClickMe()">Click me!</button>
+{{ clickMessage }}
+
+
+
